@@ -22,7 +22,25 @@
         });
     
     
-    
+    //added from activity 5
+        function queryURL(){
+        for (var i = 0; i < movie.length; i++){
+            $.ajax({
+                url: "https://www.omdbapi.com/?t=" + movie[i] + "&apikey=c92e378c",
+                method: "GET"
+            }).then(function(response) {
+                $("tbody").append(
+                    "<tr>" +
+                    "<td>" + response.Title + "</td>" +
+                    "<td>" + response.Year + "</td>" +
+                    "<td>" + response.Actors + "</td>" +
+                    "</tr>"
+                );              
+              // Create and save a reference to new empty table row
+              // Create and save references to 3 td elements containing the Title, Year, and Actors from the AJAX response object
+              // Append the td elements to the new table row
+              // Append the table row to the tbody element
+            });
     
     
     
