@@ -29,12 +29,12 @@
 
                     <div class="form-group">
 
-                        <label for="exampleFormControlInput1">Search Term: </label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+                        <label for="exampleFormControlInput1" id="search-term">Search Term: </label>
+                        <input type="text" class="form-control" id="text-search" placeholder="">
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Number of Records to Retrieve: </label>
-                        <select class="form-control" id="exampleFormControlSelect1">
+                        <select class="form-control" id="form-control">
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -44,12 +44,15 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Start Year: </label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+                        <input type="email" class="form-control" id="start-year" placeholder="">
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlInput1">End Year: </label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+                        <input type="email" class="form-control" id="end-year" placeholder="">
                     </div>
+                    <button type="button" class="btn btn-light" id="search-btn"> Search</button>
+
+                    <button type="button" class="btn btn-light" id="clear-btn">Clear Results</button>
             </div>
         </div>
         </form>
@@ -57,17 +60,26 @@
         </br>
         <div class="card">
             <div class="card-header">
-                Featured
+                Top Articles
             </div>
             <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+
             </div>
         </div>
-
-
     </div>
+    </br>
+    <div class="container">
+        <footer class="page-footer font-small blue border-blue" style="background-color: lightgrey">
+
+
+            <div class="footer-copyright text-center py-3">NYT Search
+
+            </div>
+    </div>
+
+    </footer>
+
+
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
