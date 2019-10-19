@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        var userInput = prompt("Enter search term");
+        var apiKey = "aLPiyHj0WptSjYynqy9weksUN4YE3oAY"
+        var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + userInput + "&api-key=" + apiKey
+
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function(response){
+            var articleTitle = response;
+            console.log(response);
+        });
+    
+    
+    
+    
+    
+    
+    </script>
+
+</body>
+</html>
