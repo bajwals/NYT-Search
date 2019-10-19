@@ -3,7 +3,8 @@ var userInputNumber = $("#exampleFormControlSelect1").val().trim();
 var apiKey = "aLPiyHj0WptSjYynqy9weksUN4YE3oAY"
 var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + userInputTerm + "&api-key=" + apiKey
 
-$.ajax({
+function createArticles() {
+    $.ajax({
     url: queryURL,
     method: "GET"
 }).then(function(data){
@@ -15,3 +16,6 @@ $.ajax({
         console.log(articleTitle);
     };
 });
+}
+
+$(document).on("click", ".btn-primary", createArticles);
