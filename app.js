@@ -12,8 +12,7 @@ function createArticles() {
     console.log(length)
     
     for (var i = 0; i < userInputNumber; i++) {
-        var articleTitle = data.response.docs[i].headline.main;
-        var article 
+        var articleTitle = data.response.docs[i].headline.main; 
         console.log(articleTitle);
     };
 });
