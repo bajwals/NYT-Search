@@ -9,40 +9,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
 
-        var userInput = prompt("Enter search term");
-        var apiKey = "aLPiyHj0WptSjYynqy9weksUN4YE3oAY"
-        var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + userInput + "&api-key=" + apiKey
+    var userInputTerm = $("#exampleFormControlInput1").val().trim();
+    var userInputNumber = $("#exampleFormControlSelect1").val().trim();
+    var apiKey = "aLPiyHj0WptSjYynqy9weksUN4YE3oAY"
+    var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + userInputTerm + "&api-key=" + apiKey
 
-        $.ajax({
-            url: queryURL,
-            method: "GET"
-        }).then(function(response){
-            var articleTitle = response;
-            console.log(response);
-        });
-    
-    
-    //added from activity 5
-        function queryURL(){
-        for (var i = 0; i < movie.length; i++){
-            $.ajax({
-                url: "https://www.omdbapi.com/?t=" + movie[i] + "&apikey=c92e378c",
-                method: "GET"
-            }).then(function(response) {
-                $("tbody").append(
-                    "<tr>" +
-                    "<td>" + response.Title + "</td>" +
-                    "<td>" + response.Year + "</td>" +
-                    "<td>" + response.Actors + "</td>" +
-                    "</tr>"
-                );              
-              // Create and save a reference to new empty table row
-              // Create and save references to 3 td elements containing the Title, Year, and Actors from the AJAX response object
-              // Append the td elements to the new table row
-              // Append the table row to the tbody element
-            });
-    
-    
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function(data){
+        var length = data.response.docs.length
+        console.log(length)
+        
+        for (var i = 0; i < userInputNumber; i++) {
+            var articleTitle = data.response.docs[i].headline.main;
+            var article 
+            console.log(articleTitle);
+        };
+    });
+
     
     </script>
 
